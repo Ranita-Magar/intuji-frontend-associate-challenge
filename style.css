@@ -11,7 +11,7 @@ body {
 
 .dashboard-container {
     display: grid;
-    grid-template-columns: 300px 1fr 400px;
+    grid-template-columns: 20% 1fr 25%;
     gap: 20px;
     height: 100vh;
     box-sizing: border-box;
@@ -25,6 +25,12 @@ body {
     display: flex;
     flex-direction: column;
     margin: 20px;
+    overflow-y: hidden;
+}
+
+.sidebar-bottom,
+.sidebar-help {
+    flex-shrink: 0;
 }
 
 .main-content {
@@ -48,12 +54,12 @@ body {
 
 .rectangle {
     width: 178px;
-    height: 52px;
+    height: 40px;
     background-color: #D9D9D9;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 24px;
+    margin-bottom: 16px;
 }
 
 .sidebar ul {
@@ -79,11 +85,21 @@ body {
     border-width: 1px;
     opacity: 0.3;
     color: #0D163A;
-    margin: 25px 0;
+    margin: 15px 0;
 }
 
 .sidebar-help {
     margin-top: auto;
+}
+
+.main-content {
+    border-radius: 16px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    height: 100%;
+    overflow-y: auto;
 }
 
 .main-content .searchbar {
@@ -110,10 +126,7 @@ body {
 
 .main-content .overview {
     width: 90%;
-    height: 50%;
-    top: 128px;
-    left: 312px;
-    gap: 24px;
+    flex: 1;
     border-radius: 14px;
     padding: 16px;
     background: #FFFFFF;
@@ -121,10 +134,7 @@ body {
 
 .main-content .analytics {
     width: 90%;
-    height: 50%;
-    top: 590px;
-    left: 312px;
-    gap: 10px;
+    flex: 1;
     border-radius: 14px;
     padding: 20px;
     background: #FFFFFF;
@@ -340,7 +350,7 @@ body {
     font-family: sans-serif;
     border: 1px dashed #3498db;
     width: 100%;
-    height: 300px;
+    height: 90%;
     position: relative;
 }
 
@@ -349,7 +359,7 @@ body {
     flex-direction: column;
     justify-content: space-between;
     padding: 10px;
-    font-size: 12px;
+    font-size: 14px;
     color: #555;
 }
 
@@ -417,8 +427,8 @@ body {
 
 .oval {
     height: 28px;
-    width: 34px;
-    border-radius: 40%;
+    width: 44px;
+    border-radius: 50%;
     border: 1px solid gray;
     display: flex;
     align-items: center;
