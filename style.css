@@ -24,10 +24,12 @@ body {
 }
 
 .main-content {
-    background: white;
     border-radius: 16px;
     padding: 20px;
-    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    height: 100%;
 }
 
 .right-sidebar {
@@ -74,4 +76,48 @@ body {
 
 .sidebar-help {
     margin-top: auto;
+}
+
+.main-content .searchbar {
+    width: 90%;
+    height: 30px;
+    border-radius: 100px;
+    padding: 13px 20px;
+    background: #FFFFFF;
+    border: 1px solid #ccc;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: 'Ubuntu', sans-serif;
+    color: #999;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.overview,
+.analytics {
+    flex: 1;
+    border-radius: 12px;
+    padding: 20px;
+}
+
+.main-content .overview {
+    width: 90%;
+    height: 60%;
+    top: 128px;
+    left: 312px;
+    gap: 24px;
+    border-radius: 14px;
+    padding: 16px;
+    background: #FFFFFF;
+}
+
+.main-content .analytics {
+    width: 90%;
+    height: 40%;
+    top: 590px;
+    left: 312px;
+    gap: 10px;
+    border-radius: 14px;
+    padding: 20px;
+    background: #FFFFFF;
 }
