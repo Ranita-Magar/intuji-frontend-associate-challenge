@@ -1,3 +1,8 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
 body {
     font-family: "Ubuntu", sans-serif;
     font-weight: 400;
@@ -9,7 +14,6 @@ body {
     grid-template-columns: 250px 1fr 300px;
     gap: 20px;
     height: 100vh;
-    padding: 20px;
     box-sizing: border-box;
     background-color: #f8f9fc;
 }
@@ -20,7 +24,7 @@ body {
     padding: 20px;
     display: flex;
     flex-direction: column;
-    padding: 20px;
+    margin: 20px;
 }
 
 .main-content {
@@ -35,7 +39,7 @@ body {
 .right-sidebar {
     background: white;
     border-radius: 16px;
-    padding: 20px;
+    margin: 20px;
 }
 
 .rectangle {
@@ -67,7 +71,7 @@ body {
 }
 
 .sidebar-divider {
-    width: 219;
+    width: 85%;
     border-width: 1px;
     opacity: 0.3;
     color: #0D163A;
@@ -80,7 +84,7 @@ body {
 
 .main-content .searchbar {
     width: 90%;
-    height: 30px;
+    height: 20px;
     border-radius: 100px;
     padding: 13px 20px;
     background: #FFFFFF;
@@ -102,7 +106,7 @@ body {
 
 .main-content .overview {
     width: 90%;
-    height: 60%;
+    height: 50%;
     top: 128px;
     left: 312px;
     gap: 24px;
@@ -113,11 +117,279 @@ body {
 
 .main-content .analytics {
     width: 90%;
-    height: 40%;
+    height: 50%;
     top: 590px;
     left: 312px;
     gap: 10px;
     border-radius: 14px;
     padding: 20px;
     background: #FFFFFF;
+}
+
+.overview-content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    margin-top: 16px;
+}
+
+.overview-content>div {
+    border: 1px solid gray;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    font-size: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.divider {
+    border-width: 1px;
+    opacity: 0.3;
+    color: #0D163A;
+    margin: 25px 0;
+}
+
+.overview-content .balance-top {
+    display: flex;
+    gap: 10px;
+}
+
+.overview-content .balance-top .fa-credit-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.overview .balance-top-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    text-align: left;
+    gap: 5px;
+}
+
+.overview-content .balance-bottom {
+    display: flex;
+    justify-content: space-between;
+}
+
+.overview-content .saving-top {
+    display: flex;
+    gap: 10px;
+}
+
+.overview-content .saving-top .fa-bookmark {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.saving .saving-top-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    text-align: left;
+    gap: 5px;
+}
+
+.overview-content .saving-bottom {
+    display: flex;
+    justify-content: space-between;
+}
+
+.overview-content .expenses-top {
+    display: flex;
+    gap: 10px;
+}
+
+.overview-content .expenses-top .fa-up-long {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.expenses .expenses-top-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    text-align: left;
+    gap: 5px;
+}
+
+.overview-content .expenses-bottom {
+    display: flex;
+    justify-content: space-between;
+}
+
+.overview-content .incomes-top {
+    display: flex;
+    gap: 10px;
+}
+
+.overview-content .incomes-top .fa-turn-down {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.incomes .incomes-top-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    text-align: left;
+    gap: 5px;
+}
+
+.overview-content .incomes-bottom {
+    display: flex;
+    justify-content: space-between;
+}
+
+.icon-circle {
+    width: 40px;
+    height: 40px;
+    border: 1px solid #000;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    color: #333;
+    margin-right: 10px;
+}
+
+.icon-circle .fa-bookmark {
+    color: #3BBB6E;
+}
+
+.icon-circle .fa-up-long {
+    color: #F9BA33;
+}
+
+.icon-circle .fa-turn-down {
+    color: #1775E4;
+}
+
+.dot-circle-one {
+    width: 8px;
+    height: 8px;
+    background-color: #4745A4;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.circle-one {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+}
+
+.dot-circle-two {
+    width: 8px;
+    height: 8px;
+    background-color: #F9BA33;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.circle-two {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+}
+
+.analytics .analytics-top {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 5px;
+}
+
+.analytics-top .analytics-top-right {
+    display: flex;
+    gap: 10px;
+}
+
+.analytics-rectangle {
+    height: 10px;
+    width: 80px;
+    border: 2px solid gray;
+    border-radius: 4px;
+    text-align: left;
+    padding: 6px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+}
+
+.chart {
+    display: flex;
+    font-family: sans-serif;
+    border: 1px dashed #3498db;
+    width: 100%;
+    height: 300px;
+    position: relative;
+}
+
+.y-labels {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px;
+    font-size: 12px;
+    color: #555;
+}
+
+.graph-area {
+    flex-grow: 1;
+    position: relative;
+    background: linear-gradient(to top, #f9f9f9 20%, transparent 20%),
+        linear-gradient(to top, #f9f9f9 20%, transparent 40%),
+        linear-gradient(to top, #f9f9f9 20%, transparent 60%),
+        linear-gradient(to top, #f9f9f9 20%, transparent 80%);
+    background-size: 100% 20%;
+    background-repeat: repeat-y;
+    border-left: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+}
+
+.line1,
+.line2 {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.line1 {
+    background: linear-gradient(to top, rgba(96, 112, 255, 0.2), transparent 50%),
+        linear-gradient(to right, transparent 10%, rgba(96, 112, 255, 1) 50%, transparent 90%);
+    clip-path: polygon(0% 40%, 14% 30%, 28% 50%, 42% 45%, 57% 25%, 71% 55%, 85% 50%, 100% 35%, 100% 100%, 0% 100%);
+}
+
+.line2 {
+    background: linear-gradient(to top, rgba(255, 165, 0, 0.2), transparent 50%),
+        linear-gradient(to right, transparent 10%, orange 50%, transparent 90%);
+    clip-path: polygon(0% 60%, 14% 55%, 28% 70%, 42% 60%, 57% 50%, 71% 60%, 85% 65%, 100% 55%, 100% 100%, 0% 100%);
+}
+
+.x-labels {
+    position: absolute;
+    bottom: -20px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10px;
+    font-size: 12px;
+    color: #555;
 }
